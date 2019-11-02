@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+@font-face 
+{
+    font-family: "Quicksand";
+    src: url("fonts/Quicksand_Dash.otf") format("opentype");
+    /* adding multiple fonts means that if the browser doesn't support the font, it will switch to the next one */
+    font-weight: normal;
+    font-style: normal;
+}
+
+*
+{
+    box-sizing: border-box; /* border box makes the box size incluse the size of the padding */
+    font-family: Raleway;
+    color: dimgray;
+}
+html, body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul
+{
+    margin: 0;
+}
+.nav li /* selects all li under nav */
+{
+    display: inline; /* for all list navigation items, the display will be inline instead of on default separate lines */
+}
+
+.nav a /* a pertains to an anchor or hyperlink */
+{
+    display: inline-block;
+    padding: .5em; /* increases the padding surrounding each link */
+    color: white;
+    text-decoration: none; /* takes off the default underline for links */
+}
+.nav a:hover /* link hover */
+{
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.img
+{
+    max-width: 100%;
+    height: auto;
+}
+.about-img
+{
+    /*float: left; /* removes image from flow and goes to the left of the document */
+    margin: 15px;
+    /* border-radius: 50%; */
+    border-radius: 2%;
+}
+
+.main-nav
+{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3); /* like hr */
+}
+.main-nav li
+{
+    padding: 0 5%; 
+    /* 0% for top/bottom, 5% for left/right */
+}
+
+.main-header
+{
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url("images/header-background.jpg");
+    background-blend-mode: multiply;
+    background-size: cover; /* expands images until it fits the width of the page*/
+    padding-bottom: 10px;
+}
+.header-name
+{
+    margin: 0;
+    font-size: 4em;
+    font-family: "Quicksand";
+    font-weight: normal;
+    color: rgba(117, 30, 30, 0.308);
+    padding-top: 20px;
+}
+.header-name-large
+{
+    text-align: center;
+    font-size: 9em;
+    color: white;
+}
+.container
+{
+    /* max-width: 900px; */
+    /* if the content gets too big it will max out at 900px */
+    margin: 0 5%;
+    padding: 0 1.5em;
+}
+
+.section-content
+{
+    margin: 1em;
+} 
+.section-header
+{
+    font-family: "Staatliches";
+    font-weight: normal;
+    font-size: 3em;
+    color: rgba(117, 30, 30, 0.308);
+    text-align: center;
+}
+
+.main-footer
+{
+    background-color: rgb(255, 254, 220);
+    padding: .25em 0; 
+    bottom: 0;
+}
+.main-footer-container
+{
+    display: flex; 
+    align-items: center; 
+}
+.main-footer-container ul
+{
+    flex-grow: 1;
+    text-align: end;
+}
+.footer-nav li
+{
+    padding: 0 .5em;
+}
+.footer-nav img
+{
+    max-width: 50px;
+    width: auto;
+
+    max-height: 50px;
+    height: auto;
+}
+.btn
+{
+    text-align: center;
+    vertical-align: middle; 
+    padding: .67em;
+    cursor: pointer;
+}
+.btn-header
+{
+    /*margin: .5em 15% 2em 15%; /* margin values: top, right, bottom, left */
+    display: block;
+    margin: .5em auto;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0; /* how rounded the corners are */
+    font-size: 1.5em; /* font becomes 50% larger, standard is 1em */
+    font-weight: lighter; 
+}
+
+.btn-header:hover
+{
+    background-color: rgba(255, 255, 255, .3);
+}
+.btn-play
+{
+    display: block;
+    margin: auto;
+    color: white;
+    font-size: 3rem;
+    border-radius: 50%;
+    padding: 0; /* set padding to 0 so that play button becomes a circle */
+    width: 100px;
+    height: 100px;
+}
+
+.home-row
+{
+    border-bottom: 1px solid rgb(75, 75, 75);
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.home-row:last-child
+{
+    border-bottom: none;
+}
+.home-item
+{
+    display: inline-block; /* blocks allow heights and widths to be applied to them */
+    padding-right: .5em; 
+}
+.home-date
+{
+    color: #555;
+    font-weight: bold;
+    width: 11%;
+}
+.home-city
+{
+    width: 24%;
+}
+.home-arena
+{
+    width: 42%;
+}
+.home-btn
+{
+    max-width: 19%;
+}
+.btn-primary
+{
+    color: white;
+    background-color: rgb(106, 214, 138);
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+.btn-primary:hover
+{
+    background-color: rgb(253, 164, 61);
+}
+
+.shop-item
+{
+    margin: 30px;
+}
+.shop-item-title
+{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgba(71, 18, 18, 0.767);
+    margin-bottom: 15px;
+}
+.shop-item-image
+{
+    height: 250px;
+    width: 250px;
+}
+.shop-item-details
+{
+    display: flex;
+    align-items: center; /* centres the items to be on the same line horizontally */
+    padding: 5px;
+}
+.shop-item-price
+{
+    flex-grow: 1;
+    color: rgba(71, 18, 18, 0.767);
+}
+.shop-items
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-header
+{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgba(71, 18, 18, 0.767);
+}
+.cart-column
+{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.cart-row
+{
+    display: flex;
+}
+.cart-item
+{
+    width: 45%;
+}
+.cart-price
+{
+    width: 20%;
+    font-size: 1.2em;
+    color: rgba(71, 18, 18, 0.767);
+}
+.cart-quantity
+{
+    width: 35%;
+}
+.cart-item-title
+{
+    color: rgba(71, 18, 18, 0.767);
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+.cart-item-image
+{
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger
+{
+    color: white;
+    background-color: rgb(233, 103, 103);
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+.btn-danger:hover
+{
+    background-color: rgb(173, 76, 76);
+}
+.cart-quantity-input
+{
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid rgb(106, 214, 138);
+    background-color: rgb(238, 238, 238);
+    color: rgba(71, 18, 18, 0.767);
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 10px;
+
+}
+.cart-row:last-child
+{
+    border-bottom: 1px solid black;
+}
+.cart-row:last-child .cart-column
+{
+    border: none;
+}
+.cart-total
+{
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.cart-total-title
+{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+.cart-total-price
+{
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase
+{
+    display: block;
+    margin: 40px auto 80px auto; 
+    font-size: 1.75em;
+}
